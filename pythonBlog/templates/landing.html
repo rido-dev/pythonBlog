@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog Multitema</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Descripcion web -->
+						<div class="inner">
+							<span class="image">
+							</span>
+							<!-- Header -->
+							<header>
+								<h1 align="center">BLOG MULTITEMA</h1>
+							</header>
+							<br>
+							<div>
+								<h3 align="center">AQUÍ ENCONTRARAS ARTÍCULOS DE DIFERENTES TEMAS</h3>
+							</div>
+							<br>
+							<br>
+							<br>
+						</div>
+
+				<!-- Entradas Principales -->
+					<div class="style2" id="main">
+						<tbody>
+							{%for contact in contacts%}
+							<tr>
+								<h4><div><a href="/entrada/{{contact.0}}"> {{contact.1}}</a></div></h4>
+								<td>{{contact.2}}</td>
+								<br>
+								<br>
+								<br>
+							</tr>
+							{%endfor%}
+						</tbody>
+					</div>
+
+				<!-- Crear Entrada -->
+				<form action="/crear" method="POST">
+						<div class="inner">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Titulo</label>
+											<input type="text" name="titulo" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Descripción</label>
+											<input type="text" name="descripcion" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Contenido</label>
+											<textarea type="text" name="contenido" id="message" rows="6"></textarea>
+										</div>
+										<div class="field">
+											<label for="autor">Autor</label>
+											<textarea type="text" name="autor" id="autor" rows="1"></textarea>
+										</div>
+									</div>
+									<br>
+									<ul class="actions">
+										<li><input type="submit" value="Crear entrada" class="primary" /></li>
+									</ul>
+						</div>
+				</form>
+				<!-- Footer -->
+					<footer id="footer">
+						<div align=center><a href='https://github.com/ridoutdev'>Haz click aqui para visitar mi GitHub</a></div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

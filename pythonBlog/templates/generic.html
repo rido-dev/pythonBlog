@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Editar Entrada</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Descripcion -->
+						<div class="inner">
+							<span class="image">
+							</span>
+
+							<!-- Header -->
+							<header>
+								<h1 align="center">BLOG MULTITEMA</h1>
+							</header>
+						</div>
+							<!-- Editar Entrada -->
+				<form action="/actualizar/{{contact.0}}" method="POST">
+						<div class="inner">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Titulo</label>
+											<input type="text" name="titulo" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Descripción</label>
+											<input type="text" name="descripcion" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Contenido</label>
+											<textarea type="text" name="contenido" id="message" rows="6"></textarea>
+										</div>
+										<div class="field">
+											<label for="autor">Autor</label>
+											<textarea type="text" name="autor" id="autor" rows="1"></textarea>
+										</div>
+									</div>
+									<br>
+									<ul class="actions">
+										<li><input type="submit" value="Editar entrada" class="primary" /></li>
+									</ul>
+						</div>
+				</form>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div align=center><a href='https://github.com/ridoutdev'>Haz click aqui para visitar mi GitHub</a></div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
